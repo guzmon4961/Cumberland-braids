@@ -15,14 +15,12 @@
             overflow-x: hidden;
         }
 
-        /* The "Flash" Pulse behind the form */
         @keyframes pulse-glow {
             0% { box-shadow: 0 0 20px rgba(253, 224, 71, 0.1); }
             50% { box-shadow: 0 0 60px rgba(253, 224, 71, 0.3); }
             100% { box-shadow: 0 0 20px rgba(253, 224, 71, 0.1); }
         }
 
-        /* Button Light Sweep Flash */
         @keyframes sweep {
             0% { left: -100%; }
             20% { left: 100%; }
@@ -78,18 +76,59 @@
 
     <nav class="p-8 flex justify-between items-center bg-black/40 backdrop-blur-md border-b border-white/5 sticky top-[40px] z-50">
         <h1 class="text-2xl tracking-tighter text-white uppercase italic">DIDITBY<span class="text-yellow-400">LIA</span></h1>
-        <a href="https://www.tiktok.com/@diditbylia" target="_blank" class="text-[9px] bg-white/10 px-4 py-2 rounded-full uppercase tracking-widest font-bold">TikTok</a>
+        <div class="flex items-center gap-2">
+             <div class="h-1.5 w-1.5 bg-green-500 rounded-full animate-pulse"></div>
+             <span class="text-[9px] font-bold uppercase tracking-widest text-white/50">Portmore, JA</span>
+        </div>
     </nav>
 
-    <section class="py-24 px-6 text-center">
+    <section class="py-16 px-6 text-center">
         <div class="max-w-2xl mx-auto">
             <h2 class="text-6xl md:text-8xl leading-[0.8] tracking-tighter uppercase italic drop-shadow-2xl">
                 PORTMORE<br>
                 <span class="text-yellow-400">ELITE</span><br>
                 STYLING.
             </h2>
-            <p class="mt-8 text-orange-200/40 text-[10px] uppercase tracking-[0.5em] font-bold">Braid Specialist • Kingston • Portmore</p>
         </div>
+    </section>
+
+    <section class="px-6 mb-8">
+        <a href="https://www.tiktok.com/@diditbylia" target="_blank" class="block max-w-md mx-auto group">
+            <div class="bg-black/90 border border-white/10 rounded-[32px] p-6 transition-all group-hover:border-yellow-500/50 group-hover:scale-[1.02]">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="h-12 w-12 rounded-full border-2 border-yellow-500 p-0.5 bg-stone-800 flex items-center justify-center">
+                             <span class="text-[10px] font-black">LIA</span>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1">
+                                <h3 class="text-sm font-black tracking-tight">@diditbylia</h3>
+                                <svg class="text-blue-400 w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.64.3 1.248.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                            </div>
+                            <p class="text-[8px] text-green-500 font-bold uppercase tracking-widest">Rising Braid Specialist</p>
+                        </div>
+                    </div>
+                    <div class="bg-red-600 px-2.5 py-1 rounded-lg">
+                        <span class="text-[9px] font-black animate-pulse">LIVE</span>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-2 border-t border-white/5 pt-4">
+                    <div class="text-center">
+                        <p class="text-xs font-black">11</p>
+                        <p class="text-[7px] text-white/40 uppercase tracking-widest">Followers</p>
+                    </div>
+                    <div class="text-center border-x border-white/5">
+                        <p class="text-xs font-black">191</p>
+                        <p class="text-[7px] text-white/40 uppercase tracking-widest">Likes</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xs font-black">5</p>
+                        <p class="text-[7px] text-white/40 uppercase tracking-widest">Following</p>
+                    </div>
+                </div>
+            </div>
+        </a>
     </section>
 
     <section class="px-6 pb-32">
@@ -97,7 +136,7 @@
             <div class="relative z-10">
                 <div class="flex items-center gap-2 mb-8">
                     <div class="h-2 w-2 bg-yellow-400 rounded-full animate-ping"></div>
-                    <p class="text-[10px] text-yellow-400 tracking-widest uppercase italic font-black">ACTIVE BOOKING GATE</p>
+                    <p class="text-[10px] text-yellow-400 tracking-widest uppercase italic font-black">SECURE INTAKE GATE</p>
                 </div>
                 
                 <form class="space-y-6">
