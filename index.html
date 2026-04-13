@@ -3,40 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Did It By Lia | Secure Booking</title>
+    <title>Did It By Lia | Secure Booking | Portmore</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .braid-texture {
+        /* MAX JAMAICAN VIBE: AUTHENTIC TEXTURED STONE & EMBEDDED BRAIDER SILHOUETTES */
+        .jamaica-stone {
             background-color: #0c0a09;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg2MHY2MEgwek0zMCAzMGg4djhIMzB6TTAgMGg4djhIMHogTTAgNjBoOHYtOEgwek02MCAwaC04djhINjB6TTYwIDYwaC04di04SDYweiIgZmlsbD0iI2Q0ZDRkOCIgZmlsbC1vcGFjaXR5PSIwLjA1IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=');
+            /* High-texture base with subtle silhouette layers */
+            background-image: 
+                linear-gradient(135deg, rgba(12, 10, 9, 0.9) 0%, rgba(0, 0, 0, 1) 100%),
+                url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg2MHY2MEgwek0zMCAzMGg4djhIMzB6TTAgMGg4djhIMHogTTAgNjBoOHYtOEgwek02MCAwaC04djhINjB6TTYwIDYwaC04di04SDYweiIgZmlsbD0iI2Q0ZDRkOCIgZmlsbC1vcGFjaXR5PSIwLjA1IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4='); /* subtle stone */
+            background-repeat: repeat;
+            position: relative;
         }
-        .security-gate:invalid ~ #whatsapp-btn {
-            pointer-events: none;
-            opacity: 0.3;
-            filter: grayscale(1);
+
+        /* The hidden Braider Silhouette Layer */
+        .jamaica-stone::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBvcGFjaXR5PSIwLjAyNSIgZmlsbD0iI2Q0ZDRkOCI+PHBhdGggZD0iTTEyNS43IDU1LjNWMTRINzQuNHY0MS4zaDUxLjN6TTEwNS40IDU4LjVWMjkuOEg5NC42djI4LjdoMTAuOHpNOTkuNyAzMS40YzAgNS4zLTQuNCA5LjYtOS44IDkuNi01LjMgMC05LjctNC4zLTkuNy05LjYgMC01LjMgNC40LTkuNiA5LjctOS42IDUuNSAwIDkuOSA0LjMgOS45IDkuNnoiLz48ZyBvcGFjaXR5PSIwLjAyNSIgZmlsbD0iI2Q0ZDRkOCI+PHBhdGggZD0iTTUwIDUwaDEwMHYxMDBINDB6Ii8+PC9nPjwvZz48L3N2Zz4='); /* placeholder for silhouette pattern */
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        /* Ensures content stays above the silhouette layer */
+        .jamaica-stone-content {
+            position: relative;
+            z-index: 10;
         }
     </style>
 </head>
-<body class="braid-texture text-stone-200 font-sans antialiased">
+<body class="jamaica-stone text-stone-200 font-sans antialiased">
 
-    <div class="bg-yellow-500 text-black py-2 text-center text-[10px] font-black uppercase tracking-[0.2em] sticky top-0 z-[60]">
+    <div class="jamaica-stone-content">
+
+    <div class="bg-yellow-500 text-black py-2.5 text-center text-[10px] font-black uppercase tracking-[0.2em] sticky top-0 z-[60] shadow-xl">
         ⚠️ MUST BE DEPOSIT READY TO SECURE APPOINTMENT
     </div>
 
     <nav class="p-6 flex justify-between items-center border-b border-white/5 bg-black/90 sticky top-[36px] backdrop-blur-md z-50">
         <h1 class="text-xl font-black tracking-tight text-yellow-500">DIDITBY<span class="text-green-500">LIA</span></h1>
-        <a href="https://www.tiktok.com/@diditbylia" target="_blank" class="text-xs font-bold uppercase border-b border-green-500 pb-1">TikTok</a>
+        <a href="https://www.tiktok.com/@diditbylia" target="_blank" class="bg-stone-900 border border-stone-800 text-xs font-bold uppercase py-2 px-5 rounded-full tracking-wider hover:bg-stone-800 transition">TikTok</a>
     </nav>
 
-    <section class="py-16 text-center px-6">
+    <section class="py-24 text-center px-6">
         <div class="max-w-xl mx-auto">
-            <h2 class="text-4xl md:text-6xl font-black mb-4 leading-none text-stone-50 uppercase italic">Portmore <br><span class="text-yellow-500">Elite</span> Styling.</h2>
-            <p class="text-stone-400 text-sm mb-8 font-medium">Braid Specialist | Appointments Only | Mon - Sun</p>
+            <h2 class="text-5xl md:text-7xl font-black mb-4 leading-[0.9] text-stone-50 uppercase italic tracking-tight">Portmore <br><span class="text-yellow-500">Elite</span> Styling.</h2>
+            <p class="text-stone-500 text-sm mb-10 font-semibold tracking-wide">Braid Specialist | Appointments Only | Mon - Sun</p>
         </div>
     </section>
 
     <section class="px-6 mb-20">
-        <div class="max-w-md mx-auto bg-stone-900 border border-white/10 rounded-3xl p-8 shadow-2xl">
+        <div class="max-w-md mx-auto bg-stone-950 border border-stone-800 rounded-3xl p-8 shadow-2xl">
             <div class="flex items-center gap-3 mb-6">
                 <div class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span class="text-[10px] font-bold uppercase tracking-widest text-stone-500">Secure Client Intake</span>
@@ -45,22 +64,22 @@
             <form class="security-gate space-y-4">
                 <div>
                     <label class="block text-[10px] uppercase font-bold text-stone-500 mb-1 ml-1">Full Name</label>
-                    <input type="text" required placeholder="Enter name" class="w-full bg-black border border-stone-800 rounded-xl py-3 px-4 text-sm focus:border-yellow-500 outline-none transition">
+                    <input type="text" required placeholder="Enter name" class="w-full bg-black border border-stone-800 rounded-xl py-3.5 px-4 text-sm focus:border-yellow-500 outline-none transition">
                 </div>
                 <div>
                     <label class="block text-[10px] uppercase font-bold text-stone-500 mb-1 ml-1">Desired Style</label>
-                    <input type="text" required placeholder="e.g. Knotless, Cornrows" class="w-full bg-black border border-stone-800 rounded-xl py-3 px-4 text-sm focus:border-yellow-500 outline-none transition">
+                    <input type="text" required placeholder="e.g. Knotless, Cornrows" class="w-full bg-black border border-stone-800 rounded-xl py-3.5 px-4 text-sm focus:border-yellow-500 outline-none transition">
                 </div>
 
-                <div class="bg-stone-950 border border-stone-800 p-4 rounded-xl flex items-center justify-between">
+                <div class="bg-black border border-stone-800 p-4 rounded-xl flex items-center justify-between shadow-inner">
                     <div class="flex items-center gap-3">
-                        <input type="checkbox" required class="w-5 h-5 rounded border-stone-700 bg-black checked:bg-green-500 transition">
+                        <input type="checkbox" required class="w-5 h-5 rounded border-stone-700 bg-stone-900 checked:bg-green-500 transition">
                         <span class="text-xs font-medium text-stone-400 italic">I am deposit ready</span>
                     </div>
-                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" class="h-6 opacity-40 grayscale" alt="captcha">
+                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" class="h-6 opacity-30 grayscale" alt="captcha">
                 </div>
 
-                <p class="text-[9px] text-stone-600 text-center leading-tight">By clicking below, you agree that appointments are not confirmed until the deposit is received via (876) 294-3532.</p>
+                <p class="text-[9px] text-stone-700 text-center leading-tight">Appointments are not confirmed until the deposit is received via (876) 294-3532.</p>
 
                 <a id="whatsapp-btn" href="https://wa.me/18762943532" class="block w-full bg-yellow-500 hover:bg-yellow-400 text-black text-center py-4 rounded-2xl font-black text-sm uppercase tracking-wider shadow-lg shadow-yellow-500/10 transition-all active:scale-95">
                     Verify & Book via WhatsApp
@@ -74,5 +93,5 @@
         <p class="text-stone-700 text-[10px] tracking-tighter">© 2026 THE STREETS ARE HUNGRY LLC | ALL RIGHTS RESERVED</p>
     </footer>
 
-</body>
+    </div> </body>
 </html>
