@@ -1,27 +1,146 @@
+Here is your definitive, fully refined Master Code.
+This final iteration combines the complete layout into a production-grade file with an integrated custom style block. It handles the specific extreme italic angles and condensed sans-serif letter-spacing that are key to matching the typography style exactly as seen in your screenshot.
+Save this code directly as an .html file (e.g., index.html) and open it in any web browser.
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cumberland Braids | Portmore</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIDITBYLIA — Portmore #1 Braider</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@1,900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Custom CSS Overrides to match the exact spacing and skewing from the image */
+    .brand-hero-text {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: -0.06em;
+      line-height: 0.78;
+    }
+    .brand-font-heavy {
+      font-family: 'Archivo Black', sans-serif;
+    }
+  </style>
+
+  <script>
+    // Custom tailwind expansion tokens
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            jamaicaRed: '#851111',
+            jamaicaYellow: '#FFCC00',
+            jamaicaGreen: '#00A859',
+            cardBgDark: '#081612',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-black text-white font-sans">
-    <nav class="p-6 flex justify-between items-center border-b border-gray-800">
-        <h1 class="text-xl font-bold tracking-tighter">CUMBERLAND BRAIDS</h1>
-        <a href="https://wa.me/18761234567" class="bg-red-600 px-5 py-2 rounded-full text-sm font-bold">BOOK NOW</a>
-    </nav>
-    <section class="py-20 text-center px-4">
-        <h2 class="text-5xl font-black mb-4">PORTMORE'S FINEST.</h2>
-        <p class="text-gray-400 mb-8">Professional braiding and precision styles.</p>
-        <div class="grid grid-cols-1 gap-4 max-w-md mx-auto">
-            <div class="bg-zinc-900 p-4 rounded-lg border border-gray-800">
-                <p class="text-sm text-gray-400">WhatsApp or DM for Location</p>
-            </div>
+<body class="bg-stone-900 flex justify-center items-center min-h-screen p-4 antialiased">
+
+  <div class="w-full max-w-[400px] bg-jamaicaRed min-h-[820px] rounded-[50px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col justify-between relative border-[12px] border-black select-none">
+    
+    <div>
+      <div class="bg-jamaicaYellow text-black text-center py-2.5 px-4 font-extrabold tracking-widest text-[11px] uppercase flex items-center justify-center gap-1">
+        ⚡ FLASH: DEPOSIT READY SLOTS ONLY 🌴
+      </div>
+
+      <div class="px-7 pt-7 flex justify-between items-center">
+        <div class="text-white font-black text-2xl tracking-tighter italic brand-font-heavy uppercase">
+          DIDITBY<span class="text-jamaicaYellow">LIA</span>
         </div>
-    </section>
-    <footer class="py-10 text-center border-t border-gray-900">
-        <p class="text-gray-600 text-xs">© 2026 Cumberland Braids</p>
-    </footer>
+        <div class="flex items-center gap-1.5 text-[11px] font-black text-white tracking-widest uppercase opacity-95">
+          <span class="w-2 h-2 rounded-full bg-jamaicaGreen inline-block shadow-[0_0_8px_#00A859]"></span>
+          Portmore, JA
+        </div>
+      </div>
+
+      <div class="px-7 mt-12 flex flex-col">
+        <h1 class="text-white text-[64px] brand-hero-text uppercase">
+          <span class="text-jamaicaGreen not-italic brand-font-heavy">PORT</span>MORE
+        </h1>
+        
+        <h2 class="text-jamaicaYellow text-[82px] brand-hero-text mt-2">
+          #1
+        </h2>
+        
+        <h3 class="text-jamaicaYellow text-[64px] brand-hero-text uppercase mt-2">
+          BRAIDER
+        </h3>
+        
+        <p class="text-white text-[10px] font-extrabold tracking-[0.32em] uppercase mt-12 opacity-90 italic font-sans">
+          Mon - Sun • Appointments Only
+        </p>
+      </div>
+    </div>
+
+    <div class="px-6 pb-8 flex flex-col items-center w-full">
+      
+      <div class="w-full bg-gradient-to-b from-cardBgDark via-[#070908] to-[#040404] rounded-[28px] p-5 border border-emerald-950/50 shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative mb-6">
+        
+        <div class="flex justify-between items-center mb-5">
+          <div class="flex items-center gap-2 text-white font-black tracking-widest text-xs font-sans">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.03 1.6 4.17 1.12 1.25 2.7 2.06 4.37 2.33v3.83c-1.87-.04-3.7-.72-5.16-1.89-.04 2.22-.02 4.43-.03 6.65-.04 2.19-.73 4.41-2.22 6.02-1.72 1.94-4.36 2.87-6.94 2.45-2.73-.37-5.22-2.31-6.15-4.93-1.12-3.04-.15-6.73 2.34-8.83 1.83-1.59 4.32-2.18 6.69-1.62V10.2c-1.14-.37-2.42-.14-3.37.58-.96.72-1.47 1.94-1.35 3.14.1 1.24.87 2.37 1.97 2.92 1.15.58 2.59.43 3.59-.38.65-.51.99-1.32.98-2.14V.02z"/>
+            </svg>
+            TIKTOK
+          </div>
+          <span class="bg-[#E62A43] text-white text-[9px] font-black px-2.5 py-0.5 rounded tracking-wide uppercase">
+            LIVE
+          </span>
+        </div>
+
+        <div class="flex items-center gap-3.5 border-b border-gray-900/60 pb-5 mb-4">
+          <div class="w-12 h-12 rounded-full border-2 border-jamaicaYellow bg-zinc-900 flex items-center justify-center text-white font-black text-[11px] tracking-tight shrink-0 font-sans">
+            LIA
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-1">
+              <span class="text-white font-bold text-base tracking-tight font-sans">@diditbylia</span>
+              <svg class="w-4 h-4 text-sky-400 fill-current shrink-0" viewBox="0 0 24 24">
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <p class="text-jamaicaYellow text-[9px] font-black tracking-wider uppercase mt-0.5 truncate brand-font-heavy">
+              #1 BRAIDER • PORT MORE FINEST BRAIDER! ⚡
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 text-center font-sans">
+          <div class="border-r border-gray-900">
+            <div class="text-white font-black text-base leading-none">11</div>
+            <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Followers</div>
+          </div>
+          <div class="border-r border-gray-900">
+            <div class="text-white font-black text-base leading-none">191</div>
+            <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Likes</div>
+          </div>
+          <div>
+            <div class="text-white font-black text-base leading-none">5</div>
+            <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Following</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="w-full bg-black/35 backdrop-blur-md border border-white/5 rounded-full py-2.5 px-6 text-center text-white/70 text-xs font-semibold tracking-wide font-sans">
+        cumberland-braids.vercel.app
+      </div>
+
+    </div>
+
+    <div class="absolute bottom-4 right-5 text-white/10 text-xl pointer-events-none select-none">✦</div>
+  </div>
+
 </body>
 </html>
+
