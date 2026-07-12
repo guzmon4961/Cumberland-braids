@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>DIDITBYLIA — Portmore #1 Braider</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +23,6 @@
       font-family: 'Archivo Black', sans-serif;
     }
     
-    /* Smooth CSS continuous text scrolling animation for the live ticker */
     @keyframes marquee {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-50%); }
@@ -34,11 +33,14 @@
       animation: marquee 16s linear infinite;
     }
 
-    /* Subtle Modern Luxury Island Pattern Overlay */
-    .luxury-pattern {
-      background-image: radial-gradient(rgba(0, 168, 89, 0.04) 1px, transparent 0), radial-gradient(rgba(255, 204, 0, 0.02) 1px, transparent 0);
-      background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
+    /* Luxury High-Contrast Jamaican Scenery Background Layer */
+    .jamaica-scenery-bg {
+      background-color: #070c09;
+      background-image: 
+        linear-gradient(to bottom, rgba(7, 12, 9, 0.75) 0%, rgba(4, 6, 5, 0.96) 100%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 1400' opacity='0.09'%3E%3Cg fill='%2300A859'%3E%3Cpath d='M-40 250c60-30 130-10 180 40 40 40 50 100 30 150-30-40-80-60-130-50-40 10-70 40-80 80-10-60 10-130 50-170zM200 100c40-40 100-50 150-30 40 20 60 70 50 120-20-40-60-60-110-50-40 10-70 40-80 80-20-50 0-100 40-120zM650 300c50 30 70 90 50 140-20 40-70 60-120 50 30-30 40-80 20-120-20-35-60-50-100-40 40-50 100-60 150-30z'/%3E%3C/g%3E%3Cg fill='%23FFCC00' opacity='0.5'%3E%3Cpath d='M-20 800c80 10 150 70 160 150-40-50-110-70-170-40-20 10-40 30-50 60 0-70 50-130 110-170zM700 950c70-30 120-100 110-180-20 60-80 100-150 90-30-5-60-20-80-45 40 60 90 100 120 135z'/%3E%3C/g%3E%3Cg fill='%2300A859' opacity='0.4'%3E%3Cpath d='M300 1250c60 40 90 110 70 180-30-50-90-80-160-60-30 10-50 30-70 60 20-70 80-120 160-180z'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
     }
   </style>
 
@@ -58,14 +60,14 @@
     }
   </script>
 </head>
-<body class="bg-zinc-950 flex justify-center items-start min-h-screen antialiased sm:p-6">
+<body class="bg-zinc-950 flex justify-center items-center min-h-screen antialiased overflow-x-hidden">
 
-  <!-- Main Phone-Style Web Container -->
-  <div class="w-full max-w-[400px] bg-cardBgDark min-h-screen sm:min-h-[840px] sm:rounded-[40px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between relative sm:border-[10px] border-zinc-900 select-none overflow-y-auto border-t-0 luxury-pattern">
+  <!-- Main Phone-Style Web Container with Embedded Scenery Layout -->
+  <div class="w-full max-w-[400px] min-h-screen sm:min-h-[840px] sm:my-6 sm:rounded-[40px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between relative sm:border-[10px] border-zinc-900 select-none overflow-y-auto jamaica-scenery-bg box-border overflow-x-hidden">
     
-    <!-- Abstract Ambient Lighting Behind Hero Text -->
-    <div class="absolute top-20 left-10 w-44 h-44 bg-jamaicaGreen/5 rounded-full filter blur-[60px] pointer-events-none"></div>
-    <div class="absolute top-40 right-5 w-36 h-36 bg-jamaicaYellow/5 rounded-full filter blur-[50px] pointer-events-none"></div>
+    <!-- Abstract Ambient Lighting Behind Hero Text (Infused with Vibrant National Colors) -->
+    <div class="absolute top-20 left-10 w-44 h-44 bg-jamaicaGreen/15 rounded-full filter blur-[60px] pointer-events-none"></div>
+    <div class="absolute top-40 right-5 w-36 h-36 bg-jamaicaYellow/10 rounded-full filter blur-[50px] pointer-events-none"></div>
 
     <div class="w-full z-10">
       
@@ -74,14 +76,13 @@
         <div class="animate-marquee font-extrabold tracking-widest text-[10px] uppercase">
           <span class="px-4">⚡ FLASH: DEPOSIT READY SLOTS ONLY 🌴</span>
           <span class="px-4">⭐ PORTMORE FINEST ARTISTRY 👑</span>
-          <!-- Cloned for seamless loop scrolling -->
           <span class="px-4">⚡ FLASH: DEPOSIT READY SLOTS ONLY 🌴</span>
           <span class="px-4">⭐ PORTMORE FINEST ARTISTRY 👑</span>
         </div>
       </div>
 
       <!-- Header Section -->
-      <div class="px-7 pt-8 flex justify-between items-center">
+      <div class="px-6 pt-8 flex justify-between items-center w-full">
         <div class="text-white font-black text-2xl tracking-tighter italic brand-font-heavy uppercase">
           DIDITBY<span class="text-jamaicaYellow">LIA</span>
         </div>
@@ -102,22 +103,22 @@
       </div>
 
       <!-- Modern Luxury Hero Layout -->
-      <div class="px-7 mt-12 mb-8 flex flex-col relative">
-        <h1 class="text-white text-[16vw] sm:text-[62px] brand-hero-text uppercase">
+      <div class="px-6 mt-12 mb-8 flex flex-col relative w-full">
+        <h1 class="text-white text-[15vw] sm:text-[60px] brand-hero-text uppercase">
           <span class="text-jamaicaGreen not-italic brand-font-heavy">PORT</span>MORE
         </h1>
         
-        <div class="flex items-baseline gap-4 -mt-2">
-          <h2 class="text-jamaicaYellow text-[22vw] sm:text-[88px] brand-hero-text">
+        <div class="flex items-baseline gap-4 -mt-1">
+          <h2 class="text-jamaicaYellow text-[20vw] sm:text-[80px] brand-hero-text">
             #1
           </h2>
-          <h3 class="text-white text-[14vw] sm:text-[56px] brand-hero-text uppercase">
+          <h3 class="text-white text-[13vw] sm:text-[52px] brand-hero-text uppercase">
             BRAIDER
           </h3>
         </div>
         
         <!-- Premium Accent Sub-tag instead of plain text -->
-        <div class="inline-flex items-center gap-2 bg-zinc-900/80 border border-white/5 rounded-full px-4 py-1.5 w-fit mt-10 backdrop-blur-sm">
+        <div class="inline-flex items-center gap-2 bg-zinc-900/80 border border-white/5 rounded-full px-4 py-1.5 w-fit mt-8 backdrop-blur-sm">
           <span class="text-jamaicaRed text-[10px] font-black tracking-widest uppercase">● Studio Rules</span>
           <span class="text-zinc-500 text-[10px] font-bold uppercase font-sans">Mon - Sun • Appointments Only</span>
         </div>
@@ -125,10 +126,10 @@
     </div>
 
     <!-- Interactive Section Blocks -->
-    <div class="px-6 pb-8 flex flex-col items-center w-full mt-auto z-10">
+    <div class="px-6 pb-6 flex flex-col items-center w-full mt-auto z-10 box-border">
       
-      <!-- Client Social Platform Card (TikTok Profile Feature with Verified Bio & Metrics) -->
-      <a href="https://www.tiktok.com/@diditbylia" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-b from-zinc-900/90 via-[#101412]/95 to-[#080a09]/95 backdrop-blur-md rounded-[28px] p-5 border border-zinc-800 shadow-[0_20px_40px_rgba(0,0,0,0.6)] relative mb-5 block transition-all duration-300 hover:scale-[1.01] hover:border-zinc-700">
+      <!-- Client Social Platform Card -->
+      <a href="https://www.tiktok.com/@diditbylia" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-b from-zinc-900/90 via-[#101412]/95 to-[#080a09]/95 backdrop-blur-md rounded-[28px] p-5 border border-zinc-800 shadow-[0_20px_40px_rgba(0,0,0,0.6)] relative mb-5 block transition-all duration-300 active:scale-[0.99] box-border">
         
         <div class="flex justify-between items-center mb-5">
           <div class="flex items-center gap-2 text-zinc-400 font-black tracking-widest text-[10px] font-sans">
@@ -153,14 +154,14 @@
                 <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
               </svg>
             </div>
-            <!-- Accurate Bio Integration -->
-            <p class="text-jamaicaYellow text-[10px] font-bold tracking-wide mt-0.5 font-sans leading-relaxed">
+            <!-- Real Bio Content Embedded -->
+            <p class="text-jamaicaYellow text-[11px] font-bold tracking-wide mt-1 font-sans leading-relaxed">
               Sit pretty, Leave slayed ✨<br>Braid Specialist | Portmore ✨
             </p>
           </div>
         </div>
 
-        <!-- Strictly Accurate Screen Stats -->
+        <!-- Real Metrics Display Grid -->
         <div class="grid grid-cols-3 text-center font-sans">
           <div class="border-r border-zinc-900">
             <div class="text-white font-black text-base leading-none">14</div>
@@ -178,22 +179,29 @@
 
       </a>
 
-      <!-- Modernized Luxury Booking CTA Button (Redirects straight to her personal WhatsApp) -->
-      <a href="https://wa.me/18762943532?text=Hello%20Lia,%20I'm%20interested%20in%20making%20a%20deposit%20for%20a%20braiding%20appointment!" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-jamaicaGreen to-luxuryEmerald hover:from-green-600 hover:to-green-800 text-white text-center font-bold py-4 px-6 rounded-2xl tracking-widest uppercase transition-all duration-300 shadow-xl mb-5 flex items-center justify-center gap-2 font-sans text-xs border border-green-500/20 active:scale-[0.99]">
+      <!-- Modernized Luxury Booking CTA Button -->
+      <a href="https://wa.me/18762943532?text=Hello%20Lia,%20I'm%20interested%20in%20making%20a%20deposit%20for%20a%20braiding%20appointment!" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-jamaicaGreen to-luxuryEmerald hover:from-green-600 hover:to-green-800 text-white text-center font-bold py-4 px-6 rounded-2xl tracking-widest uppercase transition-all duration-300 shadow-xl mb-5 flex items-center justify-center gap-2 font-sans text-xs border border-green-500/20 active:scale-[0.99] box-border">
         Secure Appointment & Deposit
       </a>
 
       <!-- Domain Indicator -->
-      <div class="w-full bg-zinc-900/60 backdrop-blur-md border border-white/5 rounded-full py-2.5 px-6 text-center text-zinc-500 text-[11px] font-bold tracking-widest font-sans mb-1 uppercase">
+      <div class="w-full bg-zinc-900/60 backdrop-blur-md border border-white/5 rounded-full py-2.5 px-6 text-center text-zinc-500 text-[11px] font-bold tracking-widest font-sans mb-6 uppercase box-border">
         cumberland-braids.vercel.app
+      </div>
+
+      <!-- Professional Developer Copyright & Signature Block -->
+      <div class="w-full text-center font-sans py-2">
+        <div class="text-jamaicaYellow/70 text-[11px] font-black tracking-[0.2em] uppercase mb-1">
+          CUMBERLAND BRAIDS
+        </div>
+        <div class="text-zinc-600 text-[8.5px] font-bold tracking-widest uppercase">
+          © 2026 THE STREETS ARE HUNGRY LLC | ALL RIGHTS RESERVED
+        </div>
       </div>
 
     </div>
 
-    <!-- Decorative Island Asset -->
-    <div class="absolute bottom-4 right-5 text-zinc-800/40 text-xl pointer-events-none select-none hidden sm:block">✦</div>
   </div>
 
 </body>
 </html>
-
