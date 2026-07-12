@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>DIDITBYLIA — Portmore #1 Braider</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +23,6 @@
       font-family: 'Archivo Black', sans-serif;
     }
     
-    /* Smooth CSS continuous text scrolling animation for the live ticker */
     @keyframes marquee {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-50%); }
@@ -34,11 +33,16 @@
       animation: marquee 16s linear infinite;
     }
 
-    /* Subtle Modern Luxury Island Pattern Overlay */
-    .luxury-pattern {
-      background-image: radial-gradient(rgba(0, 168, 89, 0.04) 1px, transparent 0), radial-gradient(rgba(255, 204, 0, 0.02) 1px, transparent 0);
-      background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
+    /* Premium Custom Jamaican Cross & Palm Diamond Geometric Watermark Mesh */
+    .luxury-jamaica-pattern {
+      background-color: #0B110E;
+      background-image: 
+        linear-gradient(30deg, rgba(0, 168, 89, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 168, 89, 0.03) 87.5%, rgba(0, 168, 89, 0.03)),
+        linear-gradient(150deg, rgba(0, 168, 89, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 168, 89, 0.03) 87.5%, rgba(0, 168, 89, 0.03)),
+        linear-gradient(30deg, rgba(255, 204, 0, 0.015) 61%, transparent 61.5%, transparent 38.5%, rgba(255, 204, 0, 0.015) 38.5%),
+        linear-gradient(150deg, rgba(255, 204, 0, 0.015) 61%, transparent 61.5%, transparent 38.5%, rgba(255, 204, 0, 0.015) 38.5%);
+      background-size: 32px 56px;
+      background-position: 0 0, 0 0, 16px 28px, 16px 28px;
     }
   </style>
 
@@ -58,13 +62,13 @@
     }
   </script>
 </head>
-<body class="bg-zinc-950 flex justify-center items-start min-h-screen antialiased sm:p-6">
+<body class="bg-zinc-950 flex justify-center items-center min-h-screen antialiased overflow-x-hidden">
 
   <!-- Main Phone-Style Web Container -->
-  <div class="w-full max-w-[400px] bg-cardBgDark min-h-screen sm:min-h-[840px] sm:rounded-[40px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between relative sm:border-[10px] border-zinc-900 select-none overflow-y-auto border-t-0 luxury-pattern">
+  <div class="w-full max-w-[400px] min-h-screen sm:min-h-[840px] sm:my-6 sm:rounded-[40px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between relative sm:border-[10px] border-zinc-900 select-none overflow-y-auto luxury-jamaica-pattern box-border overflow-x-hidden">
     
-    <!-- Abstract Ambient Lighting Behind Hero Text -->
-    <div class="absolute top-20 left-10 w-44 h-44 bg-jamaicaGreen/5 rounded-full filter blur-[60px] pointer-events-none"></div>
+    <!-- Abstract Ambient Lighting Behind Hero Text (Infused with National Colors) -->
+    <div class="absolute top-20 left-10 w-44 h-44 bg-jamaicaGreen/10 rounded-full filter blur-[60px] pointer-events-none"></div>
     <div class="absolute top-40 right-5 w-36 h-36 bg-jamaicaYellow/5 rounded-full filter blur-[50px] pointer-events-none"></div>
 
     <div class="w-full z-10">
@@ -74,14 +78,13 @@
         <div class="animate-marquee font-extrabold tracking-widest text-[10px] uppercase">
           <span class="px-4">⚡ FLASH: DEPOSIT READY SLOTS ONLY 🌴</span>
           <span class="px-4">⭐ PORTMORE FINEST ARTISTRY 👑</span>
-          <!-- Cloned for seamless loop scrolling -->
           <span class="px-4">⚡ FLASH: DEPOSIT READY SLOTS ONLY 🌴</span>
           <span class="px-4">⭐ PORTMORE FINEST ARTISTRY 👑</span>
         </div>
       </div>
 
       <!-- Header Section -->
-      <div class="px-7 pt-8 flex justify-between items-center">
+      <div class="px-6 pt-8 flex justify-between items-center w-full">
         <div class="text-white font-black text-2xl tracking-tighter italic brand-font-heavy uppercase">
           DIDITBY<span class="text-jamaicaYellow">LIA</span>
         </div>
@@ -102,22 +105,22 @@
       </div>
 
       <!-- Modern Luxury Hero Layout -->
-      <div class="px-7 mt-12 mb-8 flex flex-col relative">
-        <h1 class="text-white text-[16vw] sm:text-[62px] brand-hero-text uppercase">
+      <div class="px-6 mt-12 mb-8 flex flex-col relative w-full">
+        <h1 class="text-white text-[15vw] sm:text-[60px] brand-hero-text uppercase">
           <span class="text-jamaicaGreen not-italic brand-font-heavy">PORT</span>MORE
         </h1>
         
-        <div class="flex items-baseline gap-4 -mt-2">
-          <h2 class="text-jamaicaYellow text-[22vw] sm:text-[88px] brand-hero-text">
+        <div class="flex items-baseline gap-4 -mt-1">
+          <h2 class="text-jamaicaYellow text-[20vw] sm:text-[80px] brand-hero-text">
             #1
           </h2>
-          <h3 class="text-white text-[14vw] sm:text-[56px] brand-hero-text uppercase">
+          <h3 class="text-white text-[13vw] sm:text-[52px] brand-hero-text uppercase">
             BRAIDER
           </h3>
         </div>
         
         <!-- Premium Accent Sub-tag instead of plain text -->
-        <div class="inline-flex items-center gap-2 bg-zinc-900/80 border border-white/5 rounded-full px-4 py-1.5 w-fit mt-10 backdrop-blur-sm">
+        <div class="inline-flex items-center gap-2 bg-zinc-900/80 border border-white/5 rounded-full px-4 py-1.5 w-fit mt-8 backdrop-blur-sm">
           <span class="text-jamaicaRed text-[10px] font-black tracking-widest uppercase">● Studio Rules</span>
           <span class="text-zinc-500 text-[10px] font-bold uppercase font-sans">Mon - Sun • Appointments Only</span>
         </div>
@@ -125,10 +128,10 @@
     </div>
 
     <!-- Interactive Section Blocks -->
-    <div class="px-6 pb-8 flex flex-col items-center w-full mt-auto z-10">
+    <div class="px-6 pb-8 flex flex-col items-center w-full mt-auto z-10 box-border">
       
       <!-- Client Social Platform Card (TikTok Profile Feature with Verified Bio & Metrics) -->
-      <a href="https://www.tiktok.com/@diditbylia" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-b from-zinc-900/90 via-[#101412]/95 to-[#080a09]/95 backdrop-blur-md rounded-[28px] p-5 border border-zinc-800 shadow-[0_20px_40px_rgba(0,0,0,0.6)] relative mb-5 block transition-all duration-300 hover:scale-[1.01] hover:border-zinc-700">
+      <a href="https://www.tiktok.com/@diditbylia" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-b from-zinc-900/90 via-[#101412]/95 to-[#080a09]/95 backdrop-blur-md rounded-[28px] p-5 border border-zinc-800 shadow-[0_20px_40px_rgba(0,0,0,0.6)] relative mb-5 block transition-all duration-300 active:scale-[0.99] box-border">
         
         <div class="flex justify-between items-center mb-5">
           <div class="flex items-center gap-2 text-zinc-400 font-black tracking-widest text-[10px] font-sans">
@@ -153,14 +156,14 @@
                 <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
               </svg>
             </div>
-            <!-- Accurate Bio Integration -->
-            <p class="text-jamaicaYellow text-[10px] font-bold tracking-wide mt-0.5 font-sans leading-relaxed">
+            <!-- Real Bio Content Embedded -->
+            <p class="text-jamaicaYellow text-[11px] font-bold tracking-wide mt-1 font-sans leading-relaxed">
               Sit pretty, Leave slayed ✨<br>Braid Specialist | Portmore ✨
             </p>
           </div>
         </div>
 
-        <!-- Strictly Accurate Screen Stats -->
+        <!-- Real Metrics Display Grid -->
         <div class="grid grid-cols-3 text-center font-sans">
           <div class="border-r border-zinc-900">
             <div class="text-white font-black text-base leading-none">14</div>
@@ -179,21 +182,18 @@
       </a>
 
       <!-- Modernized Luxury Booking CTA Button (Redirects straight to her personal WhatsApp) -->
-      <a href="https://wa.me/18762943532?text=Hello%20Lia,%20I'm%20interested%20in%20making%20a%20deposit%20for%20a%20braiding%20appointment!" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-jamaicaGreen to-luxuryEmerald hover:from-green-600 hover:to-green-800 text-white text-center font-bold py-4 px-6 rounded-2xl tracking-widest uppercase transition-all duration-300 shadow-xl mb-5 flex items-center justify-center gap-2 font-sans text-xs border border-green-500/20 active:scale-[0.99]">
+      <a href="https://wa.me/18762943532?text=Hello%20Lia,%20I'm%20interested%20in%20making%20a%20deposit%20for%20a%20braiding%20appointment!" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-jamaicaGreen to-luxuryEmerald hover:from-green-600 hover:to-green-800 text-white text-center font-bold py-4 px-6 rounded-2xl tracking-widest uppercase transition-all duration-300 shadow-xl mb-5 flex items-center justify-center gap-2 font-sans text-xs border border-green-500/20 active:scale-[0.99] box-border">
         Secure Appointment & Deposit
       </a>
 
       <!-- Domain Indicator -->
-      <div class="w-full bg-zinc-900/60 backdrop-blur-md border border-white/5 rounded-full py-2.5 px-6 text-center text-zinc-500 text-[11px] font-bold tracking-widest font-sans mb-1 uppercase">
+      <div class="w-full bg-zinc-900/60 backdrop-blur-md border border-white/5 rounded-full py-2.5 px-6 text-center text-zinc-500 text-[11px] font-bold tracking-widest font-sans mb-1 uppercase box-border">
         cumberland-braids.vercel.app
       </div>
 
     </div>
 
-    <!-- Decorative Island Asset -->
-    <div class="absolute bottom-4 right-5 text-zinc-800/40 text-xl pointer-events-none select-none hidden sm:block">✦</div>
   </div>
 
 </body>
 </html>
-
