@@ -1,130 +1,303 @@
+Here is your exact code restructured into a highly optimized, single-file multi-page system.
+What changed:
+ * The Tab Engine: Added a lightweight JavaScript router and a smooth CSS cross-fade transition so users can switch pages instantly without ugly reloads.
+ * Page 1 (Home): Houses your original layout, brand identity, header, hero text, and the TikTok card.
+ * Page 2 (Services): A brand new premium menu display featuring a custom-themed service list layout matching your identity.
+ * Page 3 (Studio Rules): A dedicated, cleanly styled policy center to break down deposit details and appointment rules explicitly.
+ * Sticky Bottom Navigation: Added a luxury mobile application nav bar styled with matching themes (#0B110E) that anchors seamlessly to the bottom of the device viewport.
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Multi-Page Blueprint Layout</title>
+  <title>DIDITBYLIA — Portmore #1 Braider</title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@1,900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+
   <style>
-    /* Smooth page fade transitions */
-    .page-view {
+    .brand-hero-text {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: -0.06em;
+      line-height: 0.78;
+    }
+    .brand-font-heavy {
+      font-family: 'Archivo Black', sans-serif;
+    }
+    
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 16s linear infinite;
+    }
+
+    /* Luxury High-Contrast Jamaican Scenery Background Layer */
+    .jamaica-scenery-bg {
+      background-color: #070c09;
+      background-image: 
+        linear-gradient(to bottom, rgba(7, 12, 9, 0.75) 0%, rgba(4, 6, 5, 0.96) 100%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 1400' opacity='0.09'%3E%3Cg fill='%2300A859'%3E%3Cpath d='M-40 250c60-30 130-10 180 40 40 40 50 100 30 150-30-40-80-60-130-50-40 10-70 40-80 80-10-60 10-130 50-170zM200 100c40-40 100-50 150-30 40 20 60 70 50 120-20-40-60-60-110-50-40 10-70 40-80 80-20-50 0-100 40-120zM650 300c50 30 70 90 50 140-20 40-70 60-120 50 30-30 40-80 20-120-20-35-60-50-100-40 40-50 100-60 150-30z'/%3E%3C/g%3E%3Cg fill='%23FFCC00' opacity='0.5'%3E%3Cpath d='M-20 800c80 10 150 70 160 150-40-50-110-70-170-40-20 10-40 30-50 60 0-70 50-130 110-170zM700 950c70-30 120-100 110-180-20 60-80 100-150 90-30-5-60-20-80-45 40 60 90 100 120 135z'/%3E%3C/g%3E%3Cg fill='%2300A859' opacity='0.4'%3E%3Cpath d='M300 1250c60 40 90 110 70 180-30-50-90-80-160-60-30 10-50 30-70 60 20-70 80-120 160-180z'/%3E%3C/g%3E%3Csvg%3E");
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Page Switch Transition Configurations */
+    .view-panel {
       display: none;
       opacity: 0;
-      transition: opacity 0.25s ease-in-out;
+      transition: opacity 0.2s ease-in-out;
     }
-    .page-view.active {
+    .view-panel.active-panel {
       display: block;
       opacity: 1;
     }
   </style>
-  <script>
-    // Simple Router function to switch pages
-    function showPage(pageId) {
-      // Hide all pages
-      document.querySelectorAll('.page-view').forEach(page => {
-        page.classList.remove('active');
-      });
-      // Show selected page
-      document.getElementById(pageId).classList.add('active');
 
-      // Update active navigation button styles
-      document.querySelectorAll('.nav-btn').forEach(btn => {
-        btn.classList.remove('text-amber-400', 'border-t-2', 'border-amber-400');
-        btn.classList.add('text-zinc-400');
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            jamaicaRed: '#A61C1C',
+            jamaicaYellow: '#FFCC00',
+            jamaicaGreen: '#00A859',
+            cardBgDark: '#0B110E',
+            luxuryEmerald: '#005C31'
+          }
+        }
+      }
+    }
+
+    // Dynamic Multi-Page Router Implementation
+    function navigateTo(targetPanelId) {
+      document.querySelectorAll('.view-panel').forEach(panel => {
+        panel.classList.remove('active-panel');
       });
-      // Highlight current button
-      const activeBtn = document.getElementById('nav-' + pageId);
-      if (activeBtn) {
-        activeBtn.classList.remove('text-zinc-400');
-        activeBtn.classList.add('text-amber-400', 'border-t-2', 'border-amber-400');
+      document.getElementById(targetPanelId).classList.add('active-panel');
+
+      // Update Navigation Buttons Visuals
+      document.querySelectorAll('.app-nav-btn').forEach(btn => {
+        btn.classList.remove('text-jamaicaYellow', 'border-t-[3px]', 'border-jamaicaYellow');
+        btn.classList.add('text-zinc-500');
+      });
+      
+      const targetBtn = document.getElementById('btn-' + targetPanelId);
+      if (targetBtn) {
+        targetBtn.classList.remove('text-zinc-500');
+        targetBtn.classList.add('text-jamaicaYellow', 'border-t-[3px]', 'border-jamaicaYellow');
       }
     }
   </script>
 </head>
-<body class="bg-zinc-950 flex justify-center items-center min-h-screen antialiased">
+<body class="bg-zinc-950 flex justify-center items-center min-h-screen antialiased overflow-x-hidden">
 
-  <!-- Main Container -->
-  <div class="w-full max-w-[400px] h-[840px] bg-zinc-900 text-white flex flex-col justify-between relative sm:rounded-[40px] shadow-2xl overflow-hidden border border-zinc-800">
+  <!-- Main Phone-Style Web Container -->
+  <div class="w-full max-w-[400px] h-screen sm:h-[840px] sm:my-6 sm:rounded-[40px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between relative sm:border-[10px] border-zinc-900 select-none jamaica-scenery-bg box-border overflow-hidden">
     
-    <!-- TOP FIXED HEADER (Stays on all pages) -->
-    <header class="p-6 border-b border-zinc-800 bg-zinc-900/50 backdrop-blur-md z-20 flex justify-between items-center">
-      <div class="font-black tracking-wider text-xl">BRAND<span class="text-amber-400">NAME</span></div>
-      <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded-full font-bold">● OPEN</span>
-    </header>
+    <!-- Abstract Ambient Lighting Layer -->
+    <div class="absolute top-20 left-10 w-44 h-44 bg-jamaicaGreen/15 rounded-full filter blur-[60px] pointer-events-none z-0"></div>
+    <div class="absolute top-40 right-5 w-36 h-36 bg-jamaicaYellow/10 rounded-full filter blur-[50px] pointer-events-none z-0"></div>
 
-    <!-- MAIN CONTENT WINDOW (Scrollable) -->
-    <main class="flex-1 overflow-y-auto p-6 pb-24">
-      
-      <!-- ================= PAGE 1: HOME ================= -->
-      <div id="home" class="page-view active">
-        <div class="space-y-4">
-          <h1 class="text-4xl font-extrabold tracking-tight">Premium Elite Artistry.</h1>
-          <p class="text-zinc-400 text-sm">Welcome to your premier digital experience window. Select a tab below to explore our services or booking rules.</p>
+    <!-- GLOBAL HEADER (Persistent on all tabs) -->
+    <div class="w-full z-20 shrink-0">
+      <!-- Live Ticker Components -->
+      <div class="bg-jamaicaYellow text-black py-2.5 overflow-hidden relative w-full border-b border-white/5">
+        <div class="animate-marquee font-extrabold tracking-widest text-[10px] uppercase">
+          <span class="px-4">⚡ FLASH: DEPOSIT READY SLOTS ONLY 🌴</span>
+          <span class="px-4">⭐ PORTMORE FINEST ARTISTRY 👑</span>
+          <span class="px-4">⚡ FLASH: DEPOSIT READY SLOTS ONLY 🌴</span>
+          <span class="px-4">⭐ PORTMORE FINEST ARTISTRY 👑</span>
+        </div>
+      </div>
+
+      <!-- Header Brand Layout -->
+      <div class="px-6 pt-6 flex justify-between items-center w-full">
+        <div class="text-white font-black text-2xl tracking-tighter italic brand-font-heavy uppercase">
+          DIDITBY<span class="text-jamaicaYellow">LIA</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://www.instagram.com/diditbylia_?igsh=bzd2NW1odGN1Zzl4" target="_blank" rel="noopener noreferrer" class="text-jamaicaYellow hover:text-white transition-colors duration-200" title="Visit Instagram">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          <div class="flex items-center gap-1.5 text-[10px] font-black text-zinc-300 tracking-widest uppercase">
+            <span class="w-2 h-2 rounded-full bg-jamaicaGreen inline-block shadow-[0_0_10px_#00A859]"></span>
+            Portmore, JA
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DYNAMIC VIEWS SCROLL CONTAINER -->
+    <div class="flex-1 overflow-y-auto px-6 pt-4 pb-24 z-10 custom-scrollbar">
+
+      <!-- ================= PAGE 1: HOME PANEL ================= -->
+      <div id="home-panel" class="view-panel active-panel">
+        <!-- Modern Luxury Hero Layout -->
+        <div class="mt-4 mb-8 flex flex-col relative w-full">
+          <h1 class="text-white text-[15vw] sm:text-[60px] brand-hero-text uppercase">
+            <span class="text-jamaicaGreen not-italic brand-font-heavy">PORT</span>MORE
+          </h1>
           
-          <div class="p-4 bg-zinc-800/50 rounded-2xl border border-zinc-700/50">
-            <h3 class="font-bold text-amber-400">Next Available Openings</h3>
-            <p class="text-xs text-zinc-400 mt-1">Slots open every Sunday at 6:00 PM EST.</p>
+          <div class="flex items-baseline gap-4 -mt-1">
+            <h2 class="text-jamaicaYellow text-[20vw] sm:text-[80px] brand-hero-text">
+              #1
+            </h2>
+            <h3 class="text-white text-[13vw] sm:text-[52px] brand-hero-text uppercase">
+              BRAIDER
+            </h3>
+          </div>
+          
+          <div class="inline-flex items-center gap-2 bg-zinc-900/80 border border-white/5 rounded-full px-4 py-1.5 w-fit mt-6 backdrop-blur-sm">
+            <span class="text-jamaicaRed text-[10px] font-black tracking-widest uppercase">● Studio Window</span>
+            <span class="text-zinc-500 text-[10px] font-bold uppercase font-sans">Premium Braid Artistry</span>
+          </div>
+        </div>
+
+        <!-- Client TikTok Social Card -->
+        <a href="https://www.tiktok.com/@diditbylia" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-b from-zinc-900/90 via-[#101412]/95 to-[#080a09]/95 backdrop-blur-md rounded-[28px] p-5 border border-zinc-800 shadow-[0_20px_40px_rgba(0,0,0,0.6)] relative mb-5 block transition-all duration-300 active:scale-[0.99] box-border">
+          <div class="flex justify-between items-center mb-5">
+            <div class="flex items-center gap-2 text-zinc-400 font-black tracking-widest text-[10px] font-sans">
+              <svg class="w-3 h-3 fill-current text-white" viewBox="0 0 24 24">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.03 1.6 4.17 1.12 1.25 2.7 2.06 4.37 2.33v3.83c-1.87-.04-3.7-.72-5.16-1.89-.04 2.22-.02 4.43-.03 6.65-.04 2.19-.73 4.41-2.22 6.02-1.72 1.94-4.36 2.87-6.94 2.45-2.73-.37-5.22-2.31-6.15-4.93-1.12-3.04-.15-6.73 2.34-8.83 1.83-1.59 4.32-2.18 6.69-1.62V10.2c-1.14-.37-2.42-.14-3.37.58-.96.72-1.47 1.94-1.35 3.14.1 1.24.87 2.37 1.97 2.92 1.15.58 2.59.43 3.59-.38.65-.51.99-1.32.98-2.14V.02z"/>
+              </svg>
+              TIKTOK
+            </div>
+            <span class="bg-jamaicaRed text-white text-[9px] font-black px-2.5 py-0.5 rounded tracking-wider uppercase">TRENDING</span>
+          </div>
+
+          <div class="flex items-center gap-3.5 border-b border-zinc-900 pb-5 mb-4">
+            <div class="w-11 h-11 rounded-full border-2 border-jamaicaYellow bg-zinc-900 flex items-center justify-center text-white font-black text-[11px] tracking-tight shrink-0 font-sans shadow-md">LIA</div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1">
+                <span class="text-white font-bold text-base tracking-tight font-sans">@diditbylia</span>
+                <svg class="w-4 h-4 text-sky-400 fill-current shrink-0" viewBox="0 0 24 24">
+                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <p class="text-jamaicaYellow text-[11px] font-bold tracking-wide mt-1 font-sans leading-relaxed">
+                Sit pretty, Leave slayed ✨<br>Braid Specialist | Portmore ✨
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 text-center font-sans">
+            <div class="border-r border-zinc-900">
+              <div class="text-white font-black text-base leading-none">14</div>
+              <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Following</div>
+            </div>
+            <div class="border-r border-zinc-900">
+              <div class="text-white font-black text-base leading-none">45</div>
+              <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Followers</div>
+            </div>
+            <div>
+              <div class="text-white font-black text-base leading-none">431</div>
+              <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Likes</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- ================= PAGE 2: SERVICES PANEL ================= -->
+      <div id="services-panel" class="view-panel">
+        <div class="mt-4 mb-6">
+          <h2 class="text-white text-3xl font-black uppercase tracking-tight brand-font-heavy">Menu & <span class="text-jamaicaYellow">Rates</span></h2>
+          <p class="text-zinc-400 font-sans text-xs mt-1">Premium styling treatments built to last. Premium wash and blow-out prep options are available upon request.</p>
+        </div>
+
+        <!-- Service Item List Stack Layout -->
+        <div class="space-y-3 font-sans">
+          <div class="p-4 bg-cardBgDark/90 border border-zinc-800/80 rounded-2xl flex justify-between items-center">
+            <div>
+              <h4 class="text-white text-sm font-bold tracking-wide">Knotless Braids (Sml)</h4>
+              <p class="text-zinc-500 text-[11px] mt-0.5">Duration: 4.5 hrs • Neat luxury partitions</p>
+            </div>
+            <span class="text-jamaicaGreen font-black text-sm tracking-tight">$14,500 JMD</span>
+          </div>
+
+          <div class="p-4 bg-cardBgDark/90 border border-zinc-800/80 rounded-2xl flex justify-between items-center">
+            <div>
+              <h4 class="text-white text-sm font-bold tracking-wide">Stitch Braids Lines</h4>
+              <p class="text-zinc-500 text-[11px] mt-0.5">Duration: 2 hrs • High sharpness finish</p>
+            </div>
+            <span class="text-jamaicaGreen font-black text-sm tracking-tight">$7,000 JMD</span>
+          </div>
+
+          <div class="p-4 bg-cardBgDark/90 border border-zinc-800/80 rounded-2xl flex justify-between items-center">
+            <div>
+              <h4 class="text-white text-sm font-bold tracking-wide">Goddess Box Braids</h4>
+              <p class="text-zinc-500 text-[11px] mt-0.5">Duration: 4 hrs • Premium curly extensions</p>
+            </div>
+            <span class="text-jamaicaGreen font-black text-sm tracking-tight">$12,500 JMD</span>
           </div>
         </div>
       </div>
 
-      <!-- ================= PAGE 2: SERVICES ================= -->
-      <div id="services" class="page-view">
-        <div class="space-y-4">
-          <h2 class="text-2xl font-bold tracking-tight text-amber-400">Menu & Rates</h2>
-          <p class="text-zinc-400 text-sm">All installations include luxury hair prep treatments.</p>
-          
-          <!-- Service Items list -->
-          <div class="space-y-2">
-            <div class="flex justify-between items-center p-3 bg-zinc-800/30 rounded-xl">
-              <div>
-                <div class="font-bold text-sm">Classic Full Set</div>
-                <div class="text-[11px] text-zinc-500">2.5 Hours • Materials Included</div>
-              </div>
-              <span class="font-mono text-sm text-emerald-400 font-bold">$120</span>
-            </div>
-            <div class="flex justify-between items-center p-3 bg-zinc-800/30 rounded-xl">
-              <div>
-                <div class="font-bold text-sm">Exotic Custom Design</div>
-                <div class="text-[11px] text-zinc-500">3.5 Hours • Detailed Line Work</div>
-              </div>
-              <span class="font-mono text-sm text-emerald-400 font-bold">$160</span>
-            </div>
+      <!-- ================= PAGE 3: RULES PANEL ================= -->
+      <div id="rules-panel" class="view-panel">
+        <div class="mt-4 mb-6">
+          <h2 class="text-white text-3xl font-black uppercase tracking-tight brand-font-heavy">Studio <span class="text-jamaicaRed">Rules</span></h2>
+          <p class="text-zinc-400 font-sans text-xs mt-1">Please read through all guidelines thoroughly prior to booking out an open session slot.</p>
+        </div>
+
+        <!-- Rules Content Layout -->
+        <div class="space-y-3 font-sans text-xs text-zinc-300">
+          <div class="p-4 bg-zinc-950/80 border-l-4 border-jamaicaRed rounded-r-xl rounded-l-md bg-cardBgDark/60">
+            <strong class="text-white uppercase tracking-wider block mb-1 text-[11px]">1. Non-Refundable Deposits</strong>
+            A complete lock-in booking deposit is required up front. This fee goes directly toward booking security and cannot be refunded.
+          </div>
+          <div class="p-4 bg-zinc-950/80 border-l-4 border-jamaicaYellow rounded-r-xl rounded-l-md bg-cardBgDark/60">
+            <strong class="text-white uppercase tracking-wider block mb-1 text-[11px]">2. Grace Period Window</strong>
+            Arrival window limits are exactly 15 minutes. Exceeding past the timeframe will auto-cancel your allocation or apply fixed fees.
+          </div>
+          <div class="p-4 bg-zinc-950/80 border-l-4 border-jamaicaGreen rounded-r-xl rounded-l-md bg-cardBgDark/60">
+            <strong class="text-white uppercase tracking-wider block mb-1 text-[11px]">3. Solo Guest Rule</strong>
+            Due to absolute optimization constraints within the layout workspace, companion company rules are restricted. No plus ones.
           </div>
         </div>
       </div>
 
-      <!-- ================= PAGE 3: RULES ================= -->
-      <div id="rules" class="page-view">
-        <div class="space-y-4">
-          <h2 class="text-2xl font-bold tracking-tight text-red-400">Studio Policies</h2>
-          <p class="text-zinc-400 text-sm">Please read carefully before securing your calendar deposit.</p>
-          
-          <ul class="space-y-3 text-xs text-zinc-300 list-disc list-inside">
-            <li>Deposits are <span class="text-red-400 font-bold">non-refundable</span> under any circumstance.</li>
-            <li>No extra guests or children allowed in the studio space.</li>
-            <li>Grace period is exactly 15 minutes; late fees apply instantly after.</li>
-          </ul>
+      <!-- Luxury Action Button Hook -->
+      <div class="w-full mt-6">
+        <a href="https://wa.me/18762943532?text=Hello%20Lia,%20I'm%20interested%20in%20making%20a%20deposit%20for%20a%20braiding%20appointment!" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-jamaicaGreen to-luxuryEmerald hover:from-green-600 hover:to-green-800 text-white text-center font-bold py-4 px-6 rounded-2xl tracking-widest uppercase transition-all duration-300 shadow-xl flex items-center justify-center gap-2 font-sans text-xs border border-green-500/20 active:scale-[0.99] box-border">
+          Secure Appointment & Deposit
+        </a>
+      </div>
+
+      <!-- Professional Developer Copyright Signature Block -->
+      <div class="w-full text-center font-sans mt-6 py-2">
+        <div class="text-zinc-600 text-[8.5px] font-bold tracking-widest uppercase">
+          © 2026 THE STREETS ARE HUNGRY LLC | ALL RIGHTS RESERVED
         </div>
       </div>
 
-    </main>
+    </div>
 
-    <!-- FIXED BOTTOM NAVIGATION BAR -->
-    <nav class="absolute bottom-0 left-0 right-0 h-16 bg-zinc-900/90 backdrop-blur-md border-t border-zinc-800 grid grid-cols-3 z-20">
-      <!-- Home Tab Button -->
-      <button id="nav-home" onclick="showPage('home')" class="nav-btn flex flex-col items-center justify-center text-xs font-bold tracking-wider text-amber-400 border-t-2 border-amber-400 transition-all duration-200">
-        <span>HOME</span>
+    <!-- PERSISTENT MOBILE APPLICATION BOTTOM DOCK BAR -->
+    <nav class="absolute bottom-0 left-0 right-0 h-16 bg-[#0B110E]/95 backdrop-blur-md border-t border-zinc-900 grid grid-cols-3 z-30 select-none">
+      <!-- Home Link -->
+      <button id="btn-home-panel" onclick="navigateTo('home-panel')" class="app-nav-btn flex flex-col items-center justify-center text-[10px] font-black tracking-widest text-jamaicaYellow border-t-[3px] border-jamaicaYellow transition-all duration-150 font-sans">
+        HOME
       </button>
       
-      <!-- Services Tab Button -->
-      <button id="nav-services" onclick="showPage('services')" class="nav-btn flex flex-col items-center justify-center text-xs font-bold tracking-wider text-zinc-400 transition-all duration-200">
-        <span>SERVICES</span>
+      <!-- Menu Link -->
+      <button id="btn-services-panel" onclick="navigateTo('services-panel')" class="app-nav-btn flex flex-col items-center justify-center text-[10px] font-black tracking-widest text-zinc-500 transition-all duration-150 font-sans">
+        SERVICES
       </button>
       
-      <!-- Rules Tab Button -->
-      <button id="nav-rules" onclick="showPage('rules')" class="nav-btn flex flex-col items-center justify-center text-xs font-bold tracking-wider text-zinc-400 transition-all duration-200">
-        <span>RULES</span>
+      <!-- Rules Link -->
+      <button id="btn-rules-panel" onclick="navigateTo('rules-panel')" class="app-nav-btn flex flex-col items-center justify-center text-[10px] font-black tracking-widest text-zinc-500 transition-all duration-150 font-sans">
+        POLICIES
       </button>
     </nav>
 
@@ -132,3 +305,4 @@
 
 </body>
 </html>
+
