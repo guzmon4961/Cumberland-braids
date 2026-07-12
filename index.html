@@ -41,13 +41,13 @@
     }
   </script>
 </head>
-<body class="bg-stone-900 flex justify-center items-center min-h-screen p-4 antialiased">
+<body class="bg-stone-900 flex justify-center items-start min-h-screen antialiased sm:p-6">
 
-  <!-- DEVICE CONTAINER -->
-  <div class="w-full max-w-[400px] bg-jamaicaRed min-h-[820px] rounded-[50px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col justify-between relative border-[12px] border-black select-none">
+  <!-- RESPONSIVE SCROLLABLE CONTAINER -->
+  <div class="w-full max-w-[400px] bg-jamaicaRed min-h-screen sm:min-h-[820px] sm:rounded-[50px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] flex flex-col justify-between relative sm:border-[12px] border-black select-none overflow-y-auto">
     
     <!-- TOP MODULE -->
-    <div>
+    <div class="w-full">
       <!-- FLASH NOTIFICATION TICKER -->
       <div class="bg-jamaicaYellow text-black text-center py-2.5 px-4 font-extrabold tracking-widest text-[11px] uppercase flex items-center justify-center gap-1">
         ⚡ FLASH: DEPOSIT READY SLOTS ONLY 🌴
@@ -65,19 +65,19 @@
       </div>
 
       <!-- REPLICATED HERO TEXT -->
-      <div class="px-7 mt-12 flex flex-col">
+      <div class="px-7 mt-12 mb-16 flex flex-col">
         <!-- PORTMORE -->
-        <h1 class="text-white text-[64px] brand-hero-text uppercase">
+        <h1 class="text-white text-[16vw] sm:text-[64px] brand-hero-text uppercase">
           <span class="text-jamaicaGreen not-italic brand-font-heavy">PORT</span>MORE
         </h1>
         
         <!-- #1 -->
-        <h2 class="text-jamaicaYellow text-[82px] brand-hero-text mt-2">
+        <h2 class="text-jamaicaYellow text-[20vw] sm:text-[82px] brand-hero-text mt-2">
           #1
         </h2>
         
         <!-- BRAIDER -->
-        <h3 class="text-jamaicaYellow text-[64px] brand-hero-text uppercase mt-2">
+        <h3 class="text-jamaicaYellow text-[16vw] sm:text-[64px] brand-hero-text uppercase mt-2">
           BRAIDER
         </h3>
         
@@ -89,7 +89,7 @@
     </div>
 
     <!-- BOTTOM MODULE -->
-    <div class="px-6 pb-8 flex flex-col items-center w-full">
+    <div class="px-6 pb-8 flex flex-col items-center w-full mt-auto">
       
       <!-- TIKTOK MOCK LIVE CARD -->
       <div class="w-full bg-gradient-to-b from-cardBgDark via-[#070908] to-[#040404] rounded-[28px] p-5 border border-emerald-950/50 shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative mb-6">
@@ -144,16 +144,15 @@
       </div>
 
       <!-- DOMAIN ROUTER BAR -->
-      <div class="w-full bg-black/35 backdrop-blur-md border border-white/5 rounded-full py-2.5 px-6 text-center text-white/70 text-xs font-semibold tracking-wide font-sans">
+      <div class="w-full bg-black/35 backdrop-blur-md border border-white/5 rounded-full py-2.5 px-6 text-center text-white/70 text-xs font-semibold tracking-wide font-sans mb-4">
         cumberland-braids.vercel.app
       </div>
 
     </div>
 
     <!-- STAR ACCENT -->
-    <div class="absolute bottom-4 right-5 text-white/10 text-xl pointer-events-none select-none">✦</div>
+    <div class="absolute bottom-4 right-5 text-white/10 text-xl pointer-events-none select-none hidden sm:block">✦</div>
   </div>
 
 </body>
 </html>
-
