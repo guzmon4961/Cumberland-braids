@@ -33,16 +33,15 @@
       animation: marquee 16s linear infinite;
     }
 
-    /* Premium Custom Jamaican Cross & Palm Diamond Geometric Watermark Mesh */
-    .luxury-jamaica-pattern {
-      background-color: #0B110E;
+    /* Luxury High-Contrast Jamaican Scenery Background Layer */
+    .jamaica-scenery-bg {
+      background-color: #050a07;
+      /* Generates beautiful high-end dark tropical palm frond silhouettes across the canvas */
       background-image: 
-        linear-gradient(30deg, rgba(0, 168, 89, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 168, 89, 0.03) 87.5%, rgba(0, 168, 89, 0.03)),
-        linear-gradient(150deg, rgba(0, 168, 89, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(0, 168, 89, 0.03) 87.5%, rgba(0, 168, 89, 0.03)),
-        linear-gradient(30deg, rgba(255, 204, 0, 0.015) 61%, transparent 61.5%, transparent 38.5%, rgba(255, 204, 0, 0.015) 38.5%),
-        linear-gradient(150deg, rgba(255, 204, 0, 0.015) 61%, transparent 61.5%, transparent 38.5%, rgba(255, 204, 0, 0.015) 38.5%);
-      background-size: 32px 56px;
-      background-position: 0 0, 0 0, 16px 28px, 16px 28px;
+        linear-gradient(to bottom, rgba(11, 17, 14, 0.8) 0%, rgba(5, 10, 7, 0.95) 100%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 1200' opacity='0.08'%3E%3Cpath d='M-50,0 Q100,200 400,100 T900,200 M-50,150 Q150,350 450,250 T900,350 M-50,400 Q100,550 500,450 T900,600 M-100,800 Q200,900 400,750 T1000,900' stroke='%2300A859' stroke-width='4' fill='none'/%3E%3Cpath d='M100,50 C40,120 10,250 80,350 C120,280 150,120 100,50 Z M350,400 C280,480 220,600 300,720 C360,630 400,480 350,400 Z M600,150 C550,220 500,350 560,450 C620,380 650,220 600,150 Z' fill='%23FFCC00' opacity='0.4'/%3E%3Cpath d='M-20,1000 C60,900 180,950 220,1100 C120,1080 30,1050 -20,1000 Z M700,850 C620,750 500,800 450,950 C550,920 650,900 700,850 Z' fill='%2300A859' opacity='0.3'/%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
     }
   </style>
 
@@ -64,12 +63,12 @@
 </head>
 <body class="bg-zinc-950 flex justify-center items-center min-h-screen antialiased overflow-x-hidden">
 
-  <!-- Main Phone-Style Web Container -->
-  <div class="w-full max-w-[400px] min-h-screen sm:min-h-[840px] sm:my-6 sm:rounded-[40px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between relative sm:border-[10px] border-zinc-900 select-none overflow-y-auto luxury-jamaica-pattern box-border overflow-x-hidden">
+  <!-- Main Phone-Style Web Container with Embedded Scenery Layout -->
+  <div class="w-full max-w-[400px] min-h-screen sm:min-h-[840px] sm:my-6 sm:rounded-[40px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between relative sm:border-[10px] border-zinc-900 select-none overflow-y-auto jamaica-scenery-bg box-border overflow-x-hidden">
     
-    <!-- Abstract Ambient Lighting Behind Hero Text (Infused with National Colors) -->
-    <div class="absolute top-20 left-10 w-44 h-44 bg-jamaicaGreen/10 rounded-full filter blur-[60px] pointer-events-none"></div>
-    <div class="absolute top-40 right-5 w-36 h-36 bg-jamaicaYellow/5 rounded-full filter blur-[50px] pointer-events-none"></div>
+    <!-- Abstract Ambient Lighting Behind Hero Text (Infused with Vibrant National Colors) -->
+    <div class="absolute top-20 left-10 w-44 h-44 bg-jamaicaGreen/15 rounded-full filter blur-[60px] pointer-events-none"></div>
+    <div class="absolute top-40 right-5 w-36 h-36 bg-jamaicaYellow/10 rounded-full filter blur-[50px] pointer-events-none"></div>
 
     <div class="w-full z-10">
       
