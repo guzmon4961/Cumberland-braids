@@ -33,6 +33,13 @@
       width: max-content;
       animation: marquee 16s linear infinite;
     }
+
+    /* Subtle Modern Luxury Island Pattern Overlay */
+    .luxury-pattern {
+      background-image: radial-gradient(rgba(0, 168, 89, 0.04) 1px, transparent 0), radial-gradient(rgba(255, 204, 0, 0.02) 1px, transparent 0);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+    }
   </style>
 
   <script>
@@ -54,9 +61,13 @@
 <body class="bg-zinc-950 flex justify-center items-start min-h-screen antialiased sm:p-6">
 
   <!-- Main Phone-Style Web Container -->
-  <div class="w-full max-w-[400px] bg-cardBgDark min-h-screen sm:min-h-[840px] sm:rounded-[40px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between relative sm:border-[10px] border-zinc-900 select-none overflow-y-auto border-t-0">
+  <div class="w-full max-w-[400px] bg-cardBgDark min-h-screen sm:min-h-[840px] sm:rounded-[40px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] flex flex-col justify-between relative sm:border-[10px] border-zinc-900 select-none overflow-y-auto border-t-0 luxury-pattern">
     
-    <div class="w-full">
+    <!-- Abstract Ambient Lighting Behind Hero Text -->
+    <div class="absolute top-20 left-10 w-44 h-44 bg-jamaicaGreen/5 rounded-full filter blur-[60px] pointer-events-none"></div>
+    <div class="absolute top-40 right-5 w-36 h-36 bg-jamaicaYellow/5 rounded-full filter blur-[50px] pointer-events-none"></div>
+
+    <div class="w-full z-10">
       
       <!-- Live Ticker Components -->
       <div class="bg-jamaicaYellow text-black py-2.5 overflow-hidden relative w-full border-b border-white/5">
@@ -91,7 +102,7 @@
       </div>
 
       <!-- Modern Luxury Hero Layout -->
-      <div class="px-7 mt-12 mb-8 flex flex-col">
+      <div class="px-7 mt-12 mb-8 flex flex-col relative">
         <h1 class="text-white text-[16vw] sm:text-[62px] brand-hero-text uppercase">
           <span class="text-jamaicaGreen not-italic brand-font-heavy">PORT</span>MORE
         </h1>
@@ -106,7 +117,7 @@
         </div>
         
         <!-- Premium Accent Sub-tag instead of plain text -->
-        <div class="inline-flex items-center gap-2 bg-zinc-900/80 border border-white/5 rounded-full px-4 py-1.5 w-fit mt-10">
+        <div class="inline-flex items-center gap-2 bg-zinc-900/80 border border-white/5 rounded-full px-4 py-1.5 w-fit mt-10 backdrop-blur-sm">
           <span class="text-jamaicaRed text-[10px] font-black tracking-widest uppercase">● Studio Rules</span>
           <span class="text-zinc-500 text-[10px] font-bold uppercase font-sans">Mon - Sun • Appointments Only</span>
         </div>
@@ -114,10 +125,10 @@
     </div>
 
     <!-- Interactive Section Blocks -->
-    <div class="px-6 pb-8 flex flex-col items-center w-full mt-auto">
+    <div class="px-6 pb-8 flex flex-col items-center w-full mt-auto z-10">
       
-      <!-- Client Social Platform Card (TikTok Profile Feature) -->
-      <a href="https://www.tiktok.com/@diditbylia" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-b from-zinc-900 via-[#101412] to-[#080a09] rounded-[28px] p-5 border border-zinc-800 shadow-[0_20px_40px_rgba(0,0,0,0.6)] relative mb-5 block transition-all duration-300 hover:scale-[1.01] hover:border-zinc-700">
+      <!-- Client Social Platform Card (TikTok Profile Feature with Real Screenshot Metrics) -->
+      <a href="https://www.tiktok.com/@diditbylia" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-b from-zinc-900/90 via-[#101412]/95 to-[#080a09]/95 backdrop-blur-md rounded-[28px] p-5 border border-zinc-800 shadow-[0_20px_40px_rgba(0,0,0,0.6)] relative mb-5 block transition-all duration-300 hover:scale-[1.01] hover:border-zinc-700">
         
         <div class="flex justify-between items-center mb-5">
           <div class="flex items-center gap-2 text-zinc-400 font-black tracking-widest text-[10px] font-sans">
@@ -148,25 +159,26 @@
           </div>
         </div>
 
+        <!-- Strictly Accurate Screen Stats -->
         <div class="grid grid-cols-3 text-center font-sans">
           <div class="border-r border-zinc-900">
-            <div class="text-white font-black text-base leading-none">11k</div>
-            <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Followers</div>
+            <div class="text-white font-black text-base leading-none">14</div>
+            <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Following</div>
           </div>
           <div class="border-r border-zinc-900">
-            <div class="text-white font-black text-base leading-none">191k</div>
-            <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Likes</div>
+            <div class="text-white font-black text-base leading-none">45</div>
+            <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Followers</div>
           </div>
           <div>
-            <div class="text-white font-black text-base leading-none">500</div>
-            <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Following</div>
+            <div class="text-white font-black text-base leading-none">431</div>
+            <div class="text-zinc-500 text-[9px] font-bold tracking-widest uppercase mt-1.5">Likes</div>
           </div>
         </div>
 
       </a>
 
-      <!-- Modernized Luxury Booking CTA Button (Completely WhatsApp-Free) -->
-      <a href="#" class="w-full bg-gradient-to-r from-jamaicaGreen to-luxuryEmerald hover:from-green-600 hover:to-green-800 text-white text-center font-bold py-4 px-6 rounded-2xl tracking-widest uppercase transition-all duration-300 shadow-xl mb-5 flex items-center justify-center gap-2 font-sans text-xs border border-green-500/20 active:scale-[0.99]">
+      <!-- Modernized Luxury Booking CTA Button (Redirects straight to her personal WhatsApp) -->
+      <a href="https://wa.me/18762943532?text=Hello%20Lia,%20I'm%20interested%20in%20making%20a%20deposit%20for%20a%20braiding%20appointment!" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-jamaicaGreen to-luxuryEmerald hover:from-green-600 hover:to-green-800 text-white text-center font-bold py-4 px-6 rounded-2xl tracking-widest uppercase transition-all duration-300 shadow-xl mb-5 flex items-center justify-center gap-2 font-sans text-xs border border-green-500/20 active:scale-[0.99]">
         Secure Appointment & Deposit
       </a>
 
