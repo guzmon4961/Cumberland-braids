@@ -24,6 +24,15 @@
     .brand-font-heavy {
       font-family: 'Archivo Black', sans-serif;
     }
+    
+    /* Smooth CSS continuous text scrolling animation for the live ticker */
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .animate-marquee {
+      animation: marquee 12s linear infinite;
+    }
   </style>
 
   <script>
@@ -48,24 +57,39 @@
     
     <!-- TOP MODULE -->
     <div class="w-full">
-      <!-- FLASH NOTIFICATION TICKER -->
-      <div class="bg-jamaicaYellow text-black text-center py-2.5 px-4 font-extrabold tracking-widest text-[11px] uppercase flex items-center justify-center gap-1">
-        ⚡ FLASH: DEPOSIT READY SLOTS ONLY 🌴
+      
+      <!-- WORKING LIVE TICKER BANNER -->
+      <div class="bg-jamaicaYellow text-black py-2.5 overflow-hidden relative w-full border-b border-black/10">
+        <div class="whitespace-nowrap flex animate-marquee font-extrabold tracking-widest text-[11px] uppercase">
+          <span class="px-4">⚡ FLASH: DEPOSIT READY SLOTS ONLY 🌴</span>
+          <span class="px-4">⚡ FLASH: DEPOSIT READY SLOTS ONLY 🌴</span>
+        </div>
       </div>
 
-      <!-- MAIN APP LOGO & LOCATION -->
+      <!-- MAIN APP LOGO & NAVIGATION / SOCIAL LINKS -->
       <div class="px-7 pt-7 flex justify-between items-center">
         <div class="text-white font-black text-2xl tracking-tighter italic brand-font-heavy uppercase">
           DIDITBY<span class="text-jamaicaYellow">LIA</span>
         </div>
-        <div class="flex items-center gap-1.5 text-[11px] font-black text-white tracking-widest uppercase opacity-95">
-          <span class="w-2 h-2 rounded-full bg-jamaicaGreen inline-block shadow-[0_0_8px_#00A859]"></span>
-          Portmore, JA
+        
+        <div class="flex items-center gap-3">
+          <!-- INSTAGRAM CLICKABLE LINK -->
+          <a href="https://www.instagram.com/diditbylia_?igsh=bzd2NW1odGN1Zzl4" target="_blank" rel="noopener noreferrer" class="text-white hover:text-jamaicaYellow transition-colors duration-200" title="Visit Instagram">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          
+          <!-- LOCATION ACCENT -->
+          <div class="flex items-center gap-1 text-[11px] font-black text-white tracking-widest uppercase opacity-95">
+            <span class="w-2 h-2 rounded-full bg-jamaicaGreen inline-block shadow-[0_0_8px_#00A859]"></span>
+            Portmore, JA
+          </div>
         </div>
       </div>
 
       <!-- REPLICATED HERO TEXT -->
-      <div class="px-7 mt-12 mb-16 flex flex-col">
+      <div class="px-7 mt-12 mb-10 flex flex-col">
         <!-- PORTMORE -->
         <h1 class="text-white text-[16vw] sm:text-[64px] brand-hero-text uppercase">
           <span class="text-jamaicaGreen not-italic brand-font-heavy">PORT</span>MORE
@@ -92,7 +116,7 @@
     <div class="px-6 pb-8 flex flex-col items-center w-full mt-auto">
       
       <!-- TIKTOK MOCK LIVE CARD -->
-      <div class="w-full bg-gradient-to-b from-cardBgDark via-[#070908] to-[#040404] rounded-[28px] p-5 border border-emerald-950/50 shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative mb-6">
+      <div class="w-full bg-gradient-to-b from-cardBgDark via-[#070908] to-[#040404] rounded-[28px] p-5 border border-emerald-950/50 shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative mb-5">
         
         <!-- LIVE SYSTEM STATS -->
         <div class="flex justify-between items-center mb-5">
@@ -143,8 +167,16 @@
 
       </div>
 
+      <!-- ACTION DEPOSIT BUTTON -->
+      <a href="https://cumberland-braids.vercel.app" target="_blank" rel="noopener noreferrer" class="w-full bg-jamaicaYellow hover:bg-yellow-400 text-black text-center font-black py-3.5 px-6 rounded-2xl tracking-wide uppercase transition-colors duration-200 shadow-md mb-4 flex items-center justify-center gap-2 font-sans text-sm">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.5 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+        </svg>
+        Click to make deposit
+      </a>
+
       <!-- DOMAIN ROUTER BAR -->
-      <div class="w-full bg-black/35 backdrop-blur-md border border-white/5 rounded-full py-2.5 px-6 text-center text-white/70 text-xs font-semibold tracking-wide font-sans mb-4">
+      <div class="w-full bg-black/35 backdrop-blur-md border border-white/5 rounded-full py-2.5 px-6 text-center text-white/70 text-xs font-semibold tracking-wide font-sans mb-2">
         cumberland-braids.vercel.app
       </div>
 
